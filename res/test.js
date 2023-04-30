@@ -28,8 +28,98 @@ Compile.testAppend1 = function() {
 		throw haxe_Exception.thrown(new sneaker_assertion_AssertionException(__sneakerAssertionResult));
 	}
 };
+Compile.testAppend2 = function() {
+	Compile.setBodyNominal();
+	var injector = new urals_web_BrowserHtmlInjector();
+	var result = injector.append(".elem","<h2>Preheader</h2>",true);
+	var nominal = "<body>" + "<h1>Header</h1>" + "<div id=\"container\">" + "<div class=\"elem\">Text 1<h2>Preheader</h2></div>" + "<div class=\"elem\">Text 2</div>" + "</div>" + "</body>";
+	var __sneakerPartialEvaluationResult0 = js_Browser;
+	var __sneakerPartialEvaluationResult1 = window.document;
+	var __sneakerPartialEvaluationResult2 = __sneakerPartialEvaluationResult1.body;
+	var __sneakerPartialEvaluationResult3 = __sneakerPartialEvaluationResult2.outerHTML;
+	var __sneakerPartialEvaluationResult4 = nominal;
+	var __sneakerPartialEvaluationResult5 = __sneakerPartialEvaluationResult3 == __sneakerPartialEvaluationResult4;
+	var __sneakerTag = null;
+	if(window.document.body.outerHTML == nominal != true) {
+		var __sneakerAssertionResult = sneaker_assertion_AssertionResult.createError(sneaker_assertion_AssertionType.Assertion,[new sneaker_assertion_EvaluationResult("Browser",__sneakerPartialEvaluationResult0),new sneaker_assertion_EvaluationResult("Browser.document",__sneakerPartialEvaluationResult1),new sneaker_assertion_EvaluationResult("Browser.document.body",__sneakerPartialEvaluationResult2),new sneaker_assertion_EvaluationResult("Browser.document.body.outerHTML",__sneakerPartialEvaluationResult3),new sneaker_assertion_EvaluationResult("nominal",__sneakerPartialEvaluationResult4),new sneaker_assertion_EvaluationResult("Browser.document.body.outerHTML == nominal",__sneakerPartialEvaluationResult5)],__sneakerTag,null,{ fileName : "test.js/Compile.hx", lineNumber : 46, className : "Compile", methodName : "testAppend2"});
+		throw haxe_Exception.thrown(new sneaker_assertion_AssertionException(__sneakerAssertionResult));
+	}
+};
+Compile.testPrepend1 = function() {
+	Compile.setBodyNominal();
+	var injector = new urals_web_BrowserHtmlInjector();
+	var result = injector.prepend(".elem","<h2>Preheader</h2>");
+	var nominal = "<body>" + "<h1>Header</h1>" + "<div id=\"container\">" + "<div class=\"elem\"><h2>Preheader</h2>Text 1</div>" + "<div class=\"elem\"><h2>Preheader</h2>Text 2</div>" + "</div>" + "</body>";
+	var __sneakerPartialEvaluationResult0 = js_Browser;
+	var __sneakerPartialEvaluationResult1 = window.document;
+	var __sneakerPartialEvaluationResult2 = __sneakerPartialEvaluationResult1.body;
+	var __sneakerPartialEvaluationResult3 = __sneakerPartialEvaluationResult2.outerHTML;
+	var __sneakerPartialEvaluationResult4 = nominal;
+	var __sneakerPartialEvaluationResult5 = __sneakerPartialEvaluationResult3 == __sneakerPartialEvaluationResult4;
+	var __sneakerTag = null;
+	if(window.document.body.outerHTML == nominal != true) {
+		var __sneakerAssertionResult = sneaker_assertion_AssertionResult.createError(sneaker_assertion_AssertionType.Assertion,[new sneaker_assertion_EvaluationResult("Browser",__sneakerPartialEvaluationResult0),new sneaker_assertion_EvaluationResult("Browser.document",__sneakerPartialEvaluationResult1),new sneaker_assertion_EvaluationResult("Browser.document.body",__sneakerPartialEvaluationResult2),new sneaker_assertion_EvaluationResult("Browser.document.body.outerHTML",__sneakerPartialEvaluationResult3),new sneaker_assertion_EvaluationResult("nominal",__sneakerPartialEvaluationResult4),new sneaker_assertion_EvaluationResult("Browser.document.body.outerHTML == nominal",__sneakerPartialEvaluationResult5)],__sneakerTag,null,{ fileName : "test.js/Compile.hx", lineNumber : 61, className : "Compile", methodName : "testPrepend1"});
+		throw haxe_Exception.thrown(new sneaker_assertion_AssertionException(__sneakerAssertionResult));
+	}
+};
+Compile.testPrepend2 = function() {
+	Compile.setBodyNominal();
+	var injector = new urals_web_BrowserHtmlInjector();
+	var result = injector.prepend(".elem","<h2>Preheader</h2>",true);
+	var nominal = "<body>" + "<h1>Header</h1>" + "<div id=\"container\">" + "<div class=\"elem\"><h2>Preheader</h2>Text 1</div>" + "<div class=\"elem\">Text 2</div>" + "</div>" + "</body>";
+	var __sneakerPartialEvaluationResult0 = js_Browser;
+	var __sneakerPartialEvaluationResult1 = window.document;
+	var __sneakerPartialEvaluationResult2 = __sneakerPartialEvaluationResult1.body;
+	var __sneakerPartialEvaluationResult3 = __sneakerPartialEvaluationResult2.outerHTML;
+	var __sneakerPartialEvaluationResult4 = nominal;
+	var __sneakerPartialEvaluationResult5 = __sneakerPartialEvaluationResult3 == __sneakerPartialEvaluationResult4;
+	var __sneakerTag = null;
+	if(window.document.body.outerHTML == nominal != true) {
+		var __sneakerAssertionResult = sneaker_assertion_AssertionResult.createError(sneaker_assertion_AssertionType.Assertion,[new sneaker_assertion_EvaluationResult("Browser",__sneakerPartialEvaluationResult0),new sneaker_assertion_EvaluationResult("Browser.document",__sneakerPartialEvaluationResult1),new sneaker_assertion_EvaluationResult("Browser.document.body",__sneakerPartialEvaluationResult2),new sneaker_assertion_EvaluationResult("Browser.document.body.outerHTML",__sneakerPartialEvaluationResult3),new sneaker_assertion_EvaluationResult("nominal",__sneakerPartialEvaluationResult4),new sneaker_assertion_EvaluationResult("Browser.document.body.outerHTML == nominal",__sneakerPartialEvaluationResult5)],__sneakerTag,null,{ fileName : "test.js/Compile.hx", lineNumber : 76, className : "Compile", methodName : "testPrepend2"});
+		throw haxe_Exception.thrown(new sneaker_assertion_AssertionException(__sneakerAssertionResult));
+	}
+};
+Compile.testInner1 = function() {
+	Compile.setBodyNominal();
+	var injector = new urals_web_BrowserHtmlInjector();
+	var result = injector.replaceInnerhtml(".elem","<h2>Preheader</h2>");
+	var nominal = "<body>" + "<h1>Header</h1>" + "<div id=\"container\">" + "<div class=\"elem\"><h2>Preheader</h2></div>" + "<div class=\"elem\"><h2>Preheader</h2></div>" + "</div>" + "</body>";
+	var __sneakerPartialEvaluationResult0 = js_Browser;
+	var __sneakerPartialEvaluationResult1 = window.document;
+	var __sneakerPartialEvaluationResult2 = __sneakerPartialEvaluationResult1.body;
+	var __sneakerPartialEvaluationResult3 = __sneakerPartialEvaluationResult2.outerHTML;
+	var __sneakerPartialEvaluationResult4 = nominal;
+	var __sneakerPartialEvaluationResult5 = __sneakerPartialEvaluationResult3 == __sneakerPartialEvaluationResult4;
+	var __sneakerTag = null;
+	if(window.document.body.outerHTML == nominal != true) {
+		var __sneakerAssertionResult = sneaker_assertion_AssertionResult.createError(sneaker_assertion_AssertionType.Assertion,[new sneaker_assertion_EvaluationResult("Browser",__sneakerPartialEvaluationResult0),new sneaker_assertion_EvaluationResult("Browser.document",__sneakerPartialEvaluationResult1),new sneaker_assertion_EvaluationResult("Browser.document.body",__sneakerPartialEvaluationResult2),new sneaker_assertion_EvaluationResult("Browser.document.body.outerHTML",__sneakerPartialEvaluationResult3),new sneaker_assertion_EvaluationResult("nominal",__sneakerPartialEvaluationResult4),new sneaker_assertion_EvaluationResult("Browser.document.body.outerHTML == nominal",__sneakerPartialEvaluationResult5)],__sneakerTag,null,{ fileName : "test.js/Compile.hx", lineNumber : 91, className : "Compile", methodName : "testInner1"});
+		throw haxe_Exception.thrown(new sneaker_assertion_AssertionException(__sneakerAssertionResult));
+	}
+};
+Compile.testInner2 = function() {
+	Compile.setBodyNominal();
+	var injector = new urals_web_BrowserHtmlInjector();
+	var result = injector.replaceInnerhtml(".elem","<h2>Preheader</h2>",true);
+	var nominal = "<body>" + "<h1>Header</h1>" + "<div id=\"container\">" + "<div class=\"elem\"><h2>Preheader</h2></div>" + "<div class=\"elem\">Text 2</div>" + "</div>" + "</body>";
+	var __sneakerPartialEvaluationResult0 = js_Browser;
+	var __sneakerPartialEvaluationResult1 = window.document;
+	var __sneakerPartialEvaluationResult2 = __sneakerPartialEvaluationResult1.body;
+	var __sneakerPartialEvaluationResult3 = __sneakerPartialEvaluationResult2.outerHTML;
+	var __sneakerPartialEvaluationResult4 = nominal;
+	var __sneakerPartialEvaluationResult5 = __sneakerPartialEvaluationResult3 == __sneakerPartialEvaluationResult4;
+	var __sneakerTag = null;
+	if(window.document.body.outerHTML == nominal != true) {
+		var __sneakerAssertionResult = sneaker_assertion_AssertionResult.createError(sneaker_assertion_AssertionType.Assertion,[new sneaker_assertion_EvaluationResult("Browser",__sneakerPartialEvaluationResult0),new sneaker_assertion_EvaluationResult("Browser.document",__sneakerPartialEvaluationResult1),new sneaker_assertion_EvaluationResult("Browser.document.body",__sneakerPartialEvaluationResult2),new sneaker_assertion_EvaluationResult("Browser.document.body.outerHTML",__sneakerPartialEvaluationResult3),new sneaker_assertion_EvaluationResult("nominal",__sneakerPartialEvaluationResult4),new sneaker_assertion_EvaluationResult("Browser.document.body.outerHTML == nominal",__sneakerPartialEvaluationResult5)],__sneakerTag,null,{ fileName : "test.js/Compile.hx", lineNumber : 106, className : "Compile", methodName : "testInner2"});
+		throw haxe_Exception.thrown(new sneaker_assertion_AssertionException(__sneakerAssertionResult));
+	}
+};
 Compile.main = function() {
 	Compile.testAppend1();
+	Compile.testAppend2();
+	Compile.testPrepend1();
+	Compile.testPrepend2();
+	Compile.testInner1();
+	Compile.testInner2();
 };
 var HxOverrides = function() { };
 HxOverrides.__name__ = "HxOverrides";
@@ -3443,11 +3533,54 @@ urals_web_BrowserHtmlInjector.prototype = {
 		if(onlyFirst == null) {
 			onlyFirst = false;
 		}
+		var roots;
+		if(onlyFirst == false) {
+			var _g = [];
+			var _g1 = 0;
+			var _g2 = this.parentNode.querySelectorAll(targetSelector);
+			while(_g1 < _g2.length) {
+				var node = _g2[_g1];
+				++_g1;
+				_g.push(js_Boot.__cast(node , HTMLElement));
+			}
+			roots = _g;
+		} else {
+			roots = [this.parentNode.querySelector(targetSelector)];
+		}
+		var _g = 0;
+		var _g1 = roots.length;
+		while(_g < _g1) {
+			var i = _g++;
+			var newElem = window.document.createElement("div");
+			roots[i].prepend(newElem);
+			newElem.outerHTML = elemHtml;
+		}
 		return this;
 	}
 	,replaceInnerhtml: function(targetSelector,elemHtml,onlyFirst) {
 		if(onlyFirst == null) {
 			onlyFirst = false;
+		}
+		var roots;
+		if(onlyFirst == false) {
+			var _g = [];
+			var _g1 = 0;
+			var _g2 = this.parentNode.querySelectorAll(targetSelector);
+			while(_g1 < _g2.length) {
+				var node = _g2[_g1];
+				++_g1;
+				_g.push(js_Boot.__cast(node , HTMLElement));
+			}
+			roots = _g;
+		} else {
+			roots = [this.parentNode.querySelector(targetSelector)];
+		}
+		var _g = 0;
+		var _g1 = roots.length;
+		while(_g < _g1) {
+			var i = _g++;
+			var newElem = window.document.createElement("div");
+			roots[i].innerHTML = elemHtml;
 		}
 		return this;
 	}

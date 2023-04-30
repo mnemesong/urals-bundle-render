@@ -34,6 +34,14 @@ class BrowserHtmlInjector implements HtmlInjectorInterface
         elemHtml: String,
         onlyFirst: Bool = false
     ): HtmlInjectorInterface {
+        var roots = (onlyFirst == false)
+            ? [for (node in parentNode.querySelectorAll(targetSelector)) cast(node, Element)]
+            : [parentNode.querySelector(targetSelector)];
+        for (i in 0...roots.length) {
+            var newElem = Browser.document.createElement('div');
+            roots[i].prepend(newElem);
+            newElem.outerHTML = elemHtml;
+        }
         return this;
     }
 
@@ -42,6 +50,13 @@ class BrowserHtmlInjector implements HtmlInjectorInterface
         elemHtml: String,
         onlyFirst: Bool = false
     ): HtmlInjectorInterface {
+        var roots = (onlyFirst == false)
+            ? [for (node in parentNode.querySelectorAll(targetSelector)) cast(node, Element)]
+            : [parentNode.querySelector(targetSelector)];
+        for (i in 0...roots.length) {
+            var newElem = Browser.document.createElement('div');
+            roots[i].innerHTML = elemHtml;
+        }
         return this;
     }
 }
