@@ -1,3 +1,6 @@
+--library HtmlParser
+--library sneaker
 --class-path src
 --class-path test
+-D no-deprecation-warnings=True
 --run Main
